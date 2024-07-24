@@ -1,7 +1,7 @@
 Project Title: 7K Mechanical Management System
 
 
-Project Overview:
+-Project Overview-
 
 Description: A comprehensive, automated solution designed to optimize and streamline the operations of 7K Mechanical, an HVAC service company. 
 This project demonstrates my expertise in software development, data management, automation, and integration with third-party services.
@@ -12,7 +12,7 @@ Tools Used: Python, Selenium, Flask, Housecall Pro API, Rackspace API, JSON, Boo
 Key Features and Detailed Technical Descriptions:
 
 
-Data Hub:
+-Data Hub-
 
 Description: The central script responsible for logging into various services and fetching data required by different components of the system.
 
@@ -22,7 +22,7 @@ Interacts with Housecall Pro and other APIs to fetch job and customer data. Mana
 Skills Demonstrated: API integration, web scraping, session management.
 
 
-Job and Estimate Dashboard:
+-Job and Estimate Dashboard-
 
 Description: Retrieves and processes job and estimate data for display on a dynamic dashboard.
 
@@ -32,7 +32,7 @@ Allows users to click on rows to expand and view more details, including notes a
 Skills Demonstrated: Data processing, API integration, dynamic frontend development.
 
 
-Maintenance Management:
+-Maintenance Management-
 
 Description: Manages maintenance schedules, extracts customer data, and displays next service dates.
 
@@ -43,7 +43,7 @@ Displays data in a sorted order, with the oldest service dates at the top.
 Skills Demonstrated: Data extraction, processing, storage, and sorting algorithms.
 
 
-Parts Management Dashboard:
+-Parts Management Dashboard-
 
 Description: Tracks parts inventory and order statuses, providing a clear view of the supply chain.
 
@@ -54,9 +54,10 @@ Uses Flask to serve data and Bootstrap for the responsive UI.
 Skills Demonstrated: Web scraping, data classification, responsive web design.
 
 
-Rackspace Email Integration:
+-Rackspace Email Integration-
 
 Description: Manages sending and receiving emails via Rackspace.
+
 How It Works: Uses the Rackspace API to send and receive emails.
 Automates the process of sending notifications and reports.
 Integrates email communication into the workflow to ensure timely updates.
@@ -64,7 +65,7 @@ Integrates email communication into the workflow to ensure timely updates.
 Skills Demonstrated: API integration, automated email handling.
 
 
-Scheduler:
+-Scheduler-
 
 Description: Automates periodic tasks to ensure data is refreshed regularly and processes run smoothly.
 
@@ -75,9 +76,10 @@ Ensures the system remains up-to-date without manual intervention.
 Skills Demonstrated: Automation, task scheduling, script optimization.
 
 
-Frontend Management:
+-Frontend Management-
 
 Description: Manages user interactions and provides endpoints for data display.
+
 How It Works: Uses Flask to create RESTful endpoints that serve data to the frontend.
 Implements dynamic content loading with jQuery to enhance user experience.
 Designs a responsive UI with Bootstrap, ensuring compatibility across devices.
@@ -85,9 +87,10 @@ Designs a responsive UI with Bootstrap, ensuring compatibility across devices.
 Skills Demonstrated: Web development, RESTful API design, responsive design.
 
 
-Telegram Messaging:
+-Telegram Messaging-
 
 Description: Sends notifications about system status and updates.
+
 How It Works: Integrates with the Telegram Bot API to send real-time notifications.
 Automates alerts for significant events, such as data refresh completion or errors.
 Ensures stakeholders receive timely updates, improving communication.
@@ -95,7 +98,7 @@ Ensures stakeholders receive timely updates, improving communication.
 Skills Demonstrated: Real-time communication, API integration, alert systems.
 
 
-Technical Proficiencies:
+-Technical Proficiencies-
 
 Programming Languages: Python, JavaScript, HTML, CSS.
 
@@ -108,27 +111,31 @@ Data Management: JSON, pickle.
 Automation: Custom scheduling scripts, Selenium WebDriver.
 
 Web Development: Responsive design, dynamic content loading, user interface design.
-Workflow and User Interaction:
-Data Extraction:
 
+
+-Workflow and User Interaction-
+
+Data Extraction:
 Automated login and data extraction using Selenium and API calls.
 Regularly scheduled tasks to refresh data, ensuring up-to-date information.
-Data Processing and Storage:
 
+Data Processing and Storage:
 Data cleaning and transformation to ensure accuracy and consistency.
 Persistent storage using JSON files, with mechanisms to handle data updates and retention.
-Dynamic Dashboards:
 
+Dynamic Dashboards:
 Interactive dashboards for Jobs & Estimates, Parts Tracking, and Maintenance Management.
 User-friendly interfaces that allow for detailed views and note-taking.
-Automation and Scheduling:
 
+Automation and Scheduling:
 Automated data refresh tasks using custom scripts, ensuring minimal manual intervention.
 Scheduling of periodic tasks to keep the system running smoothly.
-Notification System:
 
+Notification System:
 Real-time notifications via Telegram for important updates and alerts.
 Ensures stakeholders are informed about system status and critical events.
 
-Summary:
-The 7K Mechanical Management System is a testament to my ability to develop comprehensive software solutions that integrate various technologies to solve real-world business problems. My expertise in Python, web development, API integration, and automation has enabled me to create a system that improves operational efficiency, enhances data management, and ensures timely communication.
+
+-Summary-
+The 7K Mechanical Management System is a testament to my ability to develop comprehensive software solutions that integrate various technologies to solve real-world business problems.
+My expertise in Python, web development, API integration, and automation has enabled me to create a system that improves operational efficiency, enhances data management, and ensures timely communication.
