@@ -48,15 +48,30 @@
             width: 100%;
             bottom: 0;
         }
-        .project-details {
-            background: #f4f4f4;
-            padding: 1rem;
-            margin: 1rem 0;
-            border-radius: 5px;
+        .accordion {
+            background-color: #eee;
+            color: #444;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
         }
-        .project-details h3 {
-            margin-top: 0;
+
+        .active, .accordion:hover {
+            background-color: #ccc;
         }
+
+        .panel {
+            padding: 0 18px;
+            background-color: white;
+            display: none;
+            overflow: hidden;
+        }
+
         #back-to-top-btn {
             display: none; /* Hidden by default */
             position: fixed; /* Fixed/sticky position */
@@ -95,7 +110,16 @@
     </section>
     <section id="projects">
         <h2>Projects</h2>
-        <div id="project-description"></div>
+        <button class="accordion">7K Mechanical Management System</button>
+        <div class="panel">
+            <div id="project-description-7k"></div>
+        </div>
+
+        <button class="accordion">Another Project Title</button>
+        <div class="panel">
+            <p>Details about another project...</p>
+        </div>
+        <!-- Add more projects as needed -->
     </section>
     <section id="contact">
         <h2>Contact</h2>
@@ -110,8 +134,26 @@
             fetch('7k_mechanical_project.txt')
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById('project-description').innerHTML = '<div class="project-details">' + data.replace(/\n/g, '<br>') + '</div>';
+                    document.getElementById('project-description-7k').innerHTML = '<div class="project-details">' + data.replace(/\n/g, '<br>') + '</div>';
                 });
+
+            // Get all accordion buttons
+            var acc = document.getElementsByClassName("accordion");
+            for (var i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function() {
+                    /* Toggle between adding and removing the "active" class,
+                    to highlight the button that controls the panel */
+                    this.classList.toggle("active");
+
+                    /* Toggle between hiding and showing the active panel */
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
         });
 
         //Get the button
