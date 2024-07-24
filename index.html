@@ -115,11 +115,10 @@
             <div id="project-description-7k"></div>
         </div>
 
-        <button class="accordion">Another Project Title</button>
+        <button class="accordion">Iterative Improvement Game</button>
         <div class="panel">
-            <p>Details about another project...</p>
+            <div id="project-description-iterative"></div>
         </div>
-        <!-- Add more projects as needed -->
     </section>
     <section id="contact">
         <h2>Contact</h2>
@@ -135,6 +134,12 @@
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('project-description-7k').innerHTML = '<div class="project-details">' + data.replace(/\n/g, '<br>') + '</div>';
+                });
+
+            fetch('InteritaveImprovmentGame.py')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('project-description-iterative').innerHTML = '<div class="project-details"><pre>' + data.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre></div>';
                 });
 
             // Get all accordion buttons
