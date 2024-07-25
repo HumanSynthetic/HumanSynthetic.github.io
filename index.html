@@ -115,7 +115,7 @@
             <div id="project-description-7k"></div>
         </div>
 
-        <button class="accordion">Iterative Improvement Game</button>
+        <button class="accordion">Iterative Improvement Simulation</button>
         <div class="panel">
             <div id="project-description-iterative"></div>
         </div>
@@ -136,7 +136,7 @@
                     document.getElementById('project-description-7k').innerHTML = '<div class="project-details">' + data.replace(/\n/g, '<br>') + '</div>';
                 });
 
-            fetch('InteritaveImprovmentGame.py')
+            fetch('IterativeImprovmentSimulation.py')
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('project-description-iterative').innerHTML = '<div class="project-details"><pre>' + data.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre></div>';
