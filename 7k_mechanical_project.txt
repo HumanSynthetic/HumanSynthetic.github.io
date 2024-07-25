@@ -1,5 +1,7 @@
 Project Title: 7K Mechanical Management System
 
+READ THIS: No code is available to view online regarding this software due to it's very nature of constant handling, gathering, and proccessing, of confidenial customer data. This write-up hopes to be an informative description of the software for the puroses of demonstrating my project managment, development, and problem solving skills.
+Thank You!
 
 -Project Overview-
 
