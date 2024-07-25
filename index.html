@@ -117,7 +117,9 @@
 
         <button class="accordion">Iterative Improvement Simulation</button>
         <div class="panel">
-            <div id="project-description-iterative"></div>
+            <div id="project-description-iterative">
+                <p>An educational simulation designed to teach iterative improvement principles through interactive gameplay. Check out the project on <a href="https://github.com/HumanSynthetic/IterativeImprovementSimulation" target="_blank">GitHub</a>.</p>
+            </div>
         </div>
     </section>
     <section id="contact">
@@ -134,12 +136,6 @@
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('project-description-7k').innerHTML = '<div class="project-details">' + data.replace(/\n/g, '<br>') + '</div>';
-                });
-
-            fetch('IterativeImprovmentSimulation.py')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('project-description-iterative').innerHTML = '<div class="project-details"><pre>' + data.replace(/</g, '&lt;').replace(/>/g, '&gt;') + '</pre></div>';
                 });
 
             // Get all accordion buttons
