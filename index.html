@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jared's Portfolio</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
         header {
             background: #333;
@@ -35,9 +38,17 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            padding: 0.5rem;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background: #555;
+            border-radius: 5px;
         }
         section {
             padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
         footer {
             background: #333;
@@ -59,6 +70,8 @@
             outline: none;
             font-size: 15px;
             transition: 0.4s;
+            border-radius: 5px;
+            margin-top: 10px;
         }
 
         .active, .accordion:hover {
@@ -70,26 +83,29 @@
             background-color: white;
             display: none;
             overflow: hidden;
+            border: 1px solid #ccc;
+            border-radius: 0 0 5px 5px;
         }
 
         #back-to-top-btn {
-            display: none; /* Hidden by default */
-            position: fixed; /* Fixed/sticky position */
-            bottom: 40px; /* Place the button at the bottom of the page */
-            right: 40px; /* Place the button 40px from the right */
-            z-index: 99; /* Make sure it does not overlap */
-            border: none; /* Remove borders */
-            outline: none; /* Remove outline */
-            background-color: #0066cc; /* Set a new background color */
-            color: white; /* Text color */
-            cursor: pointer; /* Add a mouse pointer on hover */
-            padding: 15px; /* Some padding */
-            border-radius: 10px; /* Rounded corners */
-            font-size: 18px; /* Increase font size */
+            display: none;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #0066cc;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            transition: background 0.3s;
         }
 
         #back-to-top-btn:hover {
-            background-color: #0055aa; /* Add a darker background on hover */
+            background-color: #0055aa;
         }
     </style>
 </head>
@@ -112,20 +128,19 @@
         <h2>Projects</h2>
         <button class="accordion">7K Mechanical Management System</button>
         <div class="panel">
-            <div id="project-description-7k"></div>
+            <div id="project-description-7k">
+                <p>A quick note!</p>
+                <p>This system handles sensitive customer data, and for that reason I did not include any back-end code.</p>
+                <p>This document is an overview. Here is a link to a <a href="https://docs.google.com/document/d/1Cp546c91sKYvnBZtovJsI_3U66NyxID1CF11U9RRtHg/edit?usp=sharing" target="_blank">Google Doc</a>, for if you would like to see a more detailed write-up.</p>
+                <hr>
+                <!-- Additional content can be dynamically loaded here -->
+            </div>
         </div>
 
         <button class="accordion">Iterative Improvement Simulation</button>
         <div class="panel">
             <div id="project-description-iterative">
                 <p>A conflict simulation designed to observe the iterative improvements an AI might make to achieve an objective. Check out the project on <a href="https://github.com/HumanSynthetic/IterativeImprovementSimulation" target="_blank">GitHub</a>.</p>
-            </div>
-        </div>
-
-        <button class="accordion">ForeverQuest</button>
-        <div class="panel">
-            <div id="project-description-foreverquest">
-                <p>An AI-powered, D&D-style, multiplayer Telegram game. Check out the project on <a href="https://github.com/HumanSynthetic/ForeverQuest" target="_blank">GitHub</a>.</p>
             </div>
         </div>
     </section>
@@ -142,18 +157,13 @@
             fetch('7k_mechanical_project.txt')
                 .then(response => response.text())
                 .then(data => {
-                    document.getElementById('project-description-7k').innerHTML = '<div class="project-details">' + data.replace(/\n/g, '<br>') + '</div>';
+                    document.getElementById('project-description-7k').innerHTML += '<div class="project-details">' + data.replace(/\n/g, '<br>') + '</div>';
                 });
 
-            // Get all accordion buttons
             var acc = document.getElementsByClassName("accordion");
             for (var i = 0; i < acc.length; i++) {
                 acc[i].addEventListener("click", function() {
-                    /* Toggle between adding and removing the "active" class,
-                    to highlight the button that controls the panel */
                     this.classList.toggle("active");
-
-                    /* Toggle between hiding and showing the active panel */
                     var panel = this.nextElementSibling;
                     if (panel.style.display === "block") {
                         panel.style.display = "none";
@@ -164,10 +174,8 @@
             }
         });
 
-        //Get the button
         var mybutton = document.getElementById("back-to-top-btn");
 
-        // When the user scrolls down 20px from the top of the document, show the button
         window.onscroll = function() {
             scrollFunction();
         };
@@ -180,7 +188,6 @@
             }
         }
 
-        // When the user clicks on the button, scroll to the top of the document
         mybutton.onclick = function() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
