@@ -1,5 +1,8 @@
 A quick note! 
-This system handles sensitive customer data, and for that reason I did
+This system handles sensitive customer data, and for that reason I did not include any back-end code.
+
+This document is an overview. Here is a link to a Google Doc, for if you would like to see a more detailed write up.
+https://docs.google.com/document/d/1Cp546c91sKYvnBZtovJsI_3U66NyxID1CF11U9RRtHg/edit?usp=sharing
 
 _____________________________________________________________________________________________________
 
