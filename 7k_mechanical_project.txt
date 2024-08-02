@@ -1,1268 +1,178 @@
-Project Title: 7K Mechanical Management System
+### 7K Mechanical Management System Overview
 
-READ THIS: No code is available to view online regarding this software due to it's very nature of constant handling, gathering, and proccessing, of confidenial customer data. This write-up hopes to be an informative description of the software for the puroses of demonstrating my project managment, development, and problem solving skills.
-Thank You!
+**Project Title:** 7K Mechanical Management System
 
--Project Overview-
+**Description:**  
+The 7K Mechanical Management System is a comprehensive automated solution designed to optimize and streamline the operations of 7K Mechanical, an HVAC service company. This project demonstrates expertise in software development, data management, automation, and integration with third-party services.
 
-Description: A comprehensive, automated solution designed to optimize and streamline the operations of 7K Mechanical, an HVAC service company. 
-This project demonstrates my expertise in software development, data management, automation, and integration with third-party services.
+**Skills Demonstrated:**
+- Python programming
+- Web scraping
+- API integration
+- Data processing
+- Web development
+- Automation
+- Notification systems
 
-Skills Demonstrated: Python programming, web scraping, API integration, data processing, web development, automation, notification systems.
+**Tools Used:**
+- Python
+- Selenium
+- Flask
+- Housecall Pro API
+- Rackspace API
+- JSON
+- Bootstrap
+- jQuery
+- Telegram Bot API
 
-Tools Used: Python, Selenium, Flask, Housecall Pro API, Rackspace API, JSON, Bootstrap, jQuery, Telegram Bot API.
-Key Features and Detailed Technical Descriptions:
+**Key Features and Detailed Technical Descriptions:**
 
+---
 
--Data Hub-
+#### **Data Hub**
 
-Description: The central script responsible for logging into various services and fetching data required by different components of the system.
+**Description:**  
+The central script responsible for logging into various services and fetching data required by different components of the system.
 
-How It Works: Utilizes Selenium WebDriver to automate the login process.
-Interacts with Housecall Pro and other APIs to fetch job and customer data. Manages session persistence to reduce redundant logins.
+**How It Works:**  
+- Utilizes Selenium WebDriver to automate the login process.
+- Interacts with Housecall Pro and other APIs to fetch job and customer data.
+- Manages session persistence to reduce redundant logins.
 
-Skills Demonstrated: API integration, web scraping, session management.
+**Skills Demonstrated:**  
+API integration, web scraping, session management.
 
+---
 
--Job and Estimate Dashboard-
+#### **Job and Estimate Dashboard**
 
-Description: Retrieves and processes job and estimate data for display on a dynamic dashboard.
+**Description:**  
+Retrieves and processes jobs and estimates data for display on a dynamic dashboard.
 
-How It Works: Fetches data from the Housecall Pro API and processes it to extract relevant information. 
-Uses Flask to serve the data to the frontend, which is built with Bootstrap and jQuery.
-Allows users to click on rows to expand and view more details, including notes and timestamps.
-Skills Demonstrated: Data processing, API integration, dynamic frontend development.
+**How It Works:**  
+- Fetches data from the Housecall Pro API and processes it to extract relevant information.
+- Uses Flask to serve the data to the frontend, which is built with Bootstrap and jQuery.
+- Allows users to click on rows to expand and view more details, including notes and timestamps.
 
+**Skills Demonstrated:**  
+Data processing, API integration, dynamic frontend development.
 
--Maintenance Management-
+---
 
-Description: Manages maintenance schedules, extracts customer data, and displays next service dates.
+#### **Maintenance Management**
 
-How It Works: Automates data extraction from Housecall Pro, processing it to highlight upcoming maintenance tasks.
-Stores data in JSON format and serves it through Flask endpoints.
-Displays data in a sorted order, with the oldest service dates at the top.
+**Description:**  
+Manages maintenance schedules, extracts customer data, and displays next service dates.
 
-Skills Demonstrated: Data extraction, processing, storage, and sorting algorithms.
+**How It Works:**  
+- Automates data extraction from Housecall Pro, processing it to highlight upcoming maintenance tasks.
+- Stores data in JSON format and serves it through Flask endpoints.
+- Displays data in a sorted order, with the oldest service dates at the top.
 
+**Skills Demonstrated:**  
+Data extraction, processing, storage, and sorting algorithms.
 
--Parts Management Dashboard-
+---
 
-Description: Tracks parts inventory and order statuses, providing a clear view of the supply chain.
+#### **Parts Management Dashboard**
 
-How It Works: Scrapes data from vendor websites and internal databases using Selenium.
-Classifies parts based on their status and integrates this information into a central dashboard.
-Uses Flask to serve data and Bootstrap for the responsive UI.
+**Description:**  
+Tracks parts inventory and order statuses, providing a clear view of the supply chain.
 
-Skills Demonstrated: Web scraping, data classification, responsive web design.
+**How It Works:**  
+- Scrapes data from vendor websites and internal databases using Selenium.
+- Classifies parts based on their status and integrates this information into a central dashboard.
+- Uses Flask to serve data and Bootstrap for the responsive UI.
 
+**Skills Demonstrated:**  
+Web scraping, data classification, responsive web design.
 
--Rackspace Email Integration-
+---
 
-Description: Manages sending and receiving emails via Rackspace.
+#### **Rackspace Email Integration**
 
-How It Works: Uses the Rackspace API to send and receive emails.
-Automates the process of sending notifications and reports.
-Integrates email communication into the workflow to ensure timely updates.
+**Description:**  
+Manages sending and receiving emails via Rackspace.
 
-Skills Demonstrated: API integration, automated email handling.
+**How It Works:**  
+- Uses the Rackspace API to send and receive emails.
+- Automates the process of sending notifications and reports.
+- Integrates email communication into the workflow to ensure timely updates.
 
+**Skills Demonstrated:**  
+API integration, automated email handling.
 
--Scheduler-
+---
 
-Description: Automates periodic tasks to ensure data is refreshed regularly and processes run smoothly.
+#### **Scheduler**
 
-How It Works: Implements custom scheduling scripts to run periodic tasks such as data refresh and report generation.
-Uses Python's schedule library to define and manage task schedules.
-Ensures the system remains up-to-date without manual intervention.
+**Description:**  
+Automates periodic tasks to ensure data is refreshed regularly and processes run smoothly.
 
-Skills Demonstrated: Automation, task scheduling, script optimization.
+**How It Works:**  
+- Implements custom scheduling scripts to run periodic tasks such as data refresh and report generation.
+- Uses Python's schedule library to define and manage task schedules.
+- Ensures the system remains up-to-date without manual intervention.
 
+**Skills Demonstrated:**  
+Automation, task scheduling, script optimization.
 
--Frontend Management-
+---
 
-Description: Manages user interactions and provides endpoints for data display.
+#### **Frontend Management**
 
-How It Works: Uses Flask to create RESTful endpoints that serve data to the frontend.
-Implements dynamic content loading with jQuery to enhance user experience.
-Designs a responsive UI with Bootstrap, ensuring compatibility across devices.
+**Description:**  
+Manages user interactions and provides endpoints for data display.
 
-Skills Demonstrated: Web development, RESTful API design, responsive design.
+**How It Works:**  
+- Uses Flask to create RESTful endpoints that serve data to the frontend.
+- Implements dynamic content loading with jQuery to enhance user experience.
+- Designs a responsive UI with Bootstrap, ensuring compatibility across devices.
 
+**Skills Demonstrated:**  
+Web development, RESTful API design, responsive design.
 
--Telegram Messaging-
+---
 
-Description: Sends notifications about system status and updates.
+#### **Telegram Messaging**
 
-How It Works: Integrates with the Telegram Bot API to send real-time notifications.
-Automates alerts for significant events, such as data refresh completion or errors.
-Ensures stakeholders receive timely updates, improving communication.
+**Description:**  
+Sends notifications about system status and updates.
 
-Skills Demonstrated: Real-time communication, API integration, alert systems.
+**How It Works:**  
+- Integrates with the Telegram Bot API to send real-time notifications.
+- Automates alerts for significant events such as data refresh completion or errors.
+- Ensures stakeholders receive timely updates, improving communication.
 
+**Skills Demonstrated:**  
+Real-time communication, API integration, alert systems.
 
--Technical Proficiencies-
+---
 
-Programming Languages: Python, JavaScript, HTML, CSS.
+### Workflow and User Interaction
 
-Frameworks and Libraries: Flask, Selenium, jQuery, Bootstrap.
+**Data Extraction:**
+- Automated login and data extraction using Selenium and API calls.
+- Regularly scheduled tasks to refresh data, ensuring up-to-date information.
 
-APIs and Integrations: Housecall Pro API, Rackspace API, Telegram Bot API.
+**Data Processing and Storage:**
+- Data cleaning and transformation to ensure accuracy and consistency.
+- Persistent storage using JSON files with mechanisms to handle data updates and retention.
 
-Data Management: JSON, pickle.
+**Dynamic Dashboards:**
+- Interactive dashboards for Jobs & Estimates, Parts Tracking, and Maintenance Management.
+- User-friendly interfaces that allow for detailed views and note-taking.
 
-Automation: Custom scheduling scripts, Selenium WebDriver.
+**Automation and Scheduling:**
+- Automated data refresh tasks using custom scripts, ensuring minimal manual intervention.
+- Scheduling of periodic tasks to keep the system running smoothly.
 
-Web Development: Responsive design, dynamic content loading, user interface design.
+**Notification System:**
+- Real-time notifications via Telegram for important updates and alerts.
+- Ensures stakeholders are informed about system status and critical events.
 
+---
 
--Workflow and User Interaction-
+### Summary
 
-Data Extraction:
-Automated login and data extraction using Selenium and API calls.
-Regularly scheduled tasks to refresh data, ensuring up-to-date information.
-
-Data Processing and Storage:
-Data cleaning and transformation to ensure accuracy and consistency.
-Persistent storage using JSON files, with mechanisms to handle data updates and retention.
-
-Dynamic Dashboards:
-Interactive dashboards for Jobs & Estimates, Parts Tracking, and Maintenance Management.
-User-friendly interfaces that allow for detailed views and note-taking.
-
-Automation and Scheduling:
-Automated data refresh tasks using custom scripts, ensuring minimal manual intervention.
-Scheduling of periodic tasks to keep the system running smoothly.
-
-Notification System:
-Real-time notifications via Telegram for important updates and alerts.
-Ensures stakeholders are informed about system status and critical events.
-
-
--Summary-
-The 7K Mechanical Management System is a testament to my ability to develop comprehensive software solutions that integrate various technologies to solve real-world business problems.
-My expertise in Python, web development, API integration, and automation has enabled me to create a system that improves operational efficiency, enhances data management, and ensures timely communication.
-
-
---AT THIS POINT I HAVE PROVIDED A GENERAL UNDERSTANDING OF THE SYSTEM--
---IF YOU WOULD LIKE TO KNOW MORE SPECIFICS, I HAVE ADDED THE NEXT SECTION--
---BELOW ARE THE DETAILS OF EACH PART OF THE SYSTEM-
-
----------------------------------------------------------------------------------
-
--Specifics: data_hub-
-
-data_hub.py serves as a centralized repository for various configurations, credentials, and utility functions needed by other scripts in the system.
-It includes functions for setting up a Selenium WebDriver, logging into various websites, retrieving API keys and credentials, error reporting, and saving/loading data using pickle.
-
-
-1. Imports and Setup
-The script begins with importing necessary libraries and setting up configurations.
-
-
-2. Selenium WebDriver Setup
-The WebDriver function sets up and configures a Selenium WebDriver instance.
-
-Parameters:
-specialres (bool): Determines whether to use a special resolution for the browser window.
-Returns:
-driver (webdriver.Chrome): Configured Chrome WebDriver instance.
-The function configures the WebDriver to run in headless mode, sets the window size, and defines a download directory.
-
-
-3. Website Login Function
-The login_to_website function automates the login process for various websites using Selenium.
-
-Parameters:
-driver (webdriver.Chrome): Selenium WebDriver instance.
-website_name (str): The name of the website to log in to.
-Functionality:
-Determines the login URL, username, password, and CSS selectors based on the website name.
-Uses Selenium to navigate to the login page, input credentials, and submit the login form.
-
-
-4. Credential Retrieval Functions
-Several functions are defined to retrieve various credentials and API keys:
-
-getHousecallProAPI(): Returns the Housecall Pro API key.
-getHousecallProUsername(): Returns the Housecall Pro username.
-getHousecallProPassword(): Returns the Housecall Pro password.
-getRackspaceEmailPassword(): Returns the Rackspace email password.
-getcurrent_filepath(): Returns the current file path of the script.
-get7KEmails(): Returns a list of all 7K Mechanical email addresses.
-get7KTelegramGroupID(): Returns the Telegram group ID for 7K Mechanical.
-get7KTelegramUsernames(index=None, all_usernames=False): Returns specific or all Telegram usernames for 7K Mechanical.
-getRedwagonEmail(): Returns a list of Redwagon Properties email addresses.
-
-
-5. Error Reporting Function
-The error_reporting function is designed to handle exceptions and report errors via Telegram and Rackspace email.
-
-Parameters:
-name (str): Name of the function or script where the error occurred.
-func (function): Function to execute and monitor for errors.
-Functionality:
-Executes the provided function and catches any exceptions.
-Attempts to send the error message via Telegram.
-If Telegram reporting fails, attempts to send the error message via Rackspace email.
-6. Save/Load Data Functions
-Functions for saving and loading data using pickle are defined:
-
-Helper Function:
-
-get_calling_script_name(script_name=None): Retrieves the name of the calling script.
-Load Data Function:
-
-Parameters:
-current_filepath (str): Directory path to load data from.
-script_name (str, optional): Name of the script.
-Returns:
-Data unpickled from the file, or an empty list if the file does not exist.
-Save Data Function:
-
-Parameters:
-current_filepath (str): Directory path to save data to.
-data (object): Data to be saved.
-script_name (str, optional): Name of the script.
-Returns:
-True if the data was saved successfully, False otherwise.
-The script attempts to create a pickle file named based on the calling script and stores or retrieves data from it.
-
-Error Handling for data_hub.py
-In case an error occurs within data_hub.py, the script catches the exception and attempts to report it via Telegram and Rackspace email.
-
----------------------------------------------------------------------------------
-
--Specifics: Scheduler-
-
-Scheduler.py is designed to automate various tasks and processes for 7K Mechanical, ensuring that specific actions are taken at the appropriate times. 
-It includes functionalities for starting a server, scheduling tasks, and handling error reporting.
-
-1. Imports
-The script imports necessary libraries and modules, including custom modules for specific tasks.
-
-
-2. Server Start Function
-The startserver function is responsible for starting the Flask server and renewing the database.
-
-Functionality:
-Starts a new thread to run the Flask server using SevenKfront.main().
-Renews the database by calling BackEndManager.main().
-
-
-3. Main Function
-The main function is the core of the script, handling the scheduling and execution of various tasks.
-
-Functionality:
-Initializes necessary variables and starts the server.
-Enters an infinite loop (while(True)) to continuously check the date and time, and execute tasks accordingly.
-
-
-4. Task Scheduling and Execution
-Within the while(True) loop, the script performs the following tasks:
-
-Vehicle Form Notification
-
-Condition: Every 14 days (two weeks).
-Task: Runs the VehicleForm_Notify module to handle vehicle form notifications.
-Pay Period Notification
-
-Condition: Every 14 days (two weeks).
-Task: Runs the Pay_period module to handle pay period notifications.
-Sevenk Price Update
-
-Condition: Every 14 days (two weeks).
-Task: Runs the SevenkPriceUpdate module to handle price updates.
-Order Price Notification
-
-Condition: Every weekday (Monday to Friday).
-Task: Runs the OrderPrice_Notify module to handle order price notifications.
-On-Call Schedule
-
-Condition: Every Monday.
-Task: Runs the On_Call module to handle on-call scheduling.
-HCJS Price Sync
-
-Condition: Monthly.
-Task: Runs the HCJSPriceSync module to handle price synchronization with HCJS.
-
-
-5. Package Updates
-The script also includes a block for updating packages every 12 hours.
-
-
-6. Error Reporting
-The main function is wrapped in a call to data_hub.error_reporting to ensure any errors are reported via Telegram and email.
-
----------------------------------------------------------------------------------
-
--Specifics: HCJSPriceSync-
-
-HCJSPriceSync.py is designed to automate the process of syncing prices from JohnStone Supply to Housecall Pro. 
-It involves downloading an XLS file, converting it to XLSX, transforming the data, and uploading it to Housecall Pro.
-
-
-1. Imports
-The script begins with importing necessary libraries and modules.
-
-
-2. Helper Functions
-
-empty_downloads_folder(download_dir)
-
-Functionality: Empties the specified downloads folder.
-Parameters:
-download_dir (str): Path to the downloads directory.
-Returns: None.
-
-
-webdriver()
-
-Functionality: Initializes and returns a new Selenium WebDriver instance.
-Parameters: None.
-Returns:
-wd (webdriver.Chrome): Configured Chrome WebDriver instance.
-
-
-login(wd, site)
-
-Functionality: Logs into the specified website using the WebDriver.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-site (str): Name of the website to log in to.
-Returns: None.
-
-
-download_xls(wd, download_dir, sleep_time)
-
-Functionality: Navigates to the parts vendor's website and downloads the XLS file.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-download_dir (str): Path to the downloads directory.
-sleep_time (int): Time to wait between actions.
-Returns:
-latest_file (str): Path to the latest downloaded XLS file.
-
-
-convert_xls_to_xlsx(xls_path, xlsx_path)
-
-Functionality: Converts an XLS file to XLSX format.
-Parameters:
-xls_path (str): Path to the XLS file.
-xlsx_path (str): Path to save the XLSX file.
-Returns: None.
-
-
-apply_markup(price)
-
-Functionality: Applies tax and markup to a given price.
-Parameters:
-price (float): Original price.
-Returns:
-final_price (float): Final price after tax and markup.
-
-
-truncate_name(name)
-
-Functionality: Truncates a name to a maximum length of 191 characters.
-Parameters:
-name (str): Original name.
-Returns:
-truncated_name (str): Truncated name.
-
-
-transform_data(xls_path, csv_template_path, output_csv_path)
-
-Functionality: Transforms data from the XLSX file into a structured CSV file.
-Parameters:
-xls_path (str): Path to the XLSX file.
-csv_template_path (str): Path to the CSV template file.
-output_csv_path (str): Path to save the transformed CSV file.
-Returns: None.
-
-
-handle_file_upload(wd, output_csv_path, sleep_time)
-
-Functionality: Handles the file upload process to Housecall Pro.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-output_csv_path (str): Path to the CSV file to be uploaded.
-sleep_time (int): Time to wait between actions.
-Returns: None.
-
-
-3. Main Function
-The main function orchestrates the entire process from downloading the file to uploading the transformed data.
-
-Functionality:
-Initializes necessary variables and directories.
-Loads the WebDriver and logs into JohnStone Supply.
-Downloads the price list XLS file and converts it to XLSX.
-Transforms the data and saves it as a CSV file.
-Logs into Housecall Pro and uploads the CSV file.
-Empties the downloads folder and saves the current date.
-Sends a final report via Telegram.
-Parameters: None.
-Returns: None.
-
-Error Handling
-The main function is wrapped in a call to data_hub.error_reporting to ensure any errors are reported via Telegram and email.
-
----------------------------------------------------------------------------------
-
--Specifics: On_Call-
-
-On_Call.py is designed to automate the notification process for on-call employees at 7K Mechanical. 
-It calculates the current on-call period, manages the rotation of on-call employees, and sends notifications via Telegram.
-
-
-1. Imports
-The script begins with importing necessary libraries and modules.
-
-
-2. Function Definitions
-
-get_on_call_dates()
-
-Functionality: Calculates the start and end dates for the current on-call period.
-Parameters: None.
-Returns:
-tuple: A tuple containing the start and end dates as strings in the format "Weekday, Month Day, Year".
-
-
-load_current_oncall_index()
-
-Functionality: Loads the current on-call employee index from a persistent storage file.
-Parameters: None.
-Returns:
-int: The current on-call employee index.
-
-
-update_oncall_index(index)
-
-Functionality: Updates the on-call employee index in the persistent storage file.
-Parameters:
-index (int): The new on-call employee index to be saved.
-Returns: None.
-
-
-send_oncall_notification(oncallemployee)
-
-Functionality: Sends an on-call notification to the current on-call employee via Telegram.
-Parameters:
-oncallemployee (int): The index of the current on-call employee.
-Returns: None.
-
-
-save_execution_date()
-
-Functionality: Saves the execution date of the on-call notification script to a persistent storage file.
-Parameters: None.
-Returns: None.
-
-
-3. Main Function
-
-The main function orchestrates the entire on-call notification process.
-
-Functionality:
-Loads the current on-call employee index.
-Sends an on-call notification to the current on-call employee.
-Updates the on-call employee index for the next period.
-Saves the execution date.
-Sends a confirmation message via Telegram.
-Parameters: None.
-Returns: None.
-
-Error Handling
-The main function is wrapped in a call to data_hub.error_reporting to ensure any errors are reported via Telegram and email.
-
----------------------------------------------------------------------------------
-
--Specifics: SevenkPriceUpdate-
-
-SevenkPriceUpdate.py is designed to automate the process of updating prices on the 7K Mechanical price update page using data from JohnStone Supply. 
-It involves logging into both websites, retrieving item prices from JohnStone Supply, and updating the prices on the 7K Mechanical website.
-
-1. Imports
-The script begins with importing necessary libraries and modules.
-
-
-2. Helper Functions
-
-webdriver()
-
-Functionality: Initializes and returns a new Selenium WebDriver instance.
-Parameters: None.
-Returns:
-wd (webdriver.Chrome): Configured Chrome WebDriver instance.
-
-
-login(wd, site)
-
-Functionality: Logs into the specified website using the WebDriver.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-site (str): Name of the website to log in to.
-Returns: None.
-
-
-3. Main Function
-
-The main function orchestrates the entire price update process.
-
-Functionality:
-Initializes the WebDriver and logs into both the 7K Price Update and JohnStone Supply websites.
-Calls the_process function to perform the price update.
-Saves the current date to a persistent storage file.
-Sends a confirmation message via Telegram.
-Parameters: None.
-Returns: None.
-
-
-4. Price Update Process Function
-
-the_process(wd)
-
-Functionality: Performs the price update process by retrieving item prices from JohnStone Supply and updating them on the 7K Mechanical website.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-Returns: None.
-
-
-Detailed Steps:
-Opens the 7K Mechanical price update page and a new tab for JohnStone Supply.
-Iterates through the items on the 7K Mechanical price update page, retrieves their prices from JohnStone Supply, and updates the prices on the 7K Mechanical page.
-Handles exceptions and adjusts the wait time dynamically to ensure data retrieval.
-
-Error Handling
-The main function is wrapped in a call to data_hub.error_reporting to ensure any errors are reported via Telegram and email.
-
----------------------------------------------------------------------------------
-
--Specifics: Pay_period-
-
-Pay_period.py is designed to automate the notification process for the pay period at 7K Mechanical. 
-It calculates the pay period dates, sends notification emails and Telegram messages to employees, and saves the execution date for record-keeping.
-
-1. Imports
-The script begins with importing necessary libraries and modules.
-
-
-2. Helper Function
-
-get_pay_period_dates()
-
-Functionality: Calculates the start and end dates for the current pay period.
-Parameters: None.
-Returns:
-formatted_start_date (str): Start date of the pay period formatted as "Weekday, Month Day, Year".
-formatted_end_date (str): End date of the pay period formatted as "Weekday, Month Day, Year".
-pay_day (str): String indicating when payday is, typically "this Friday!".
-
-
-3. Main Function
-
-The main function orchestrates the entire pay period notification process.
-
-Functionality:
-Calculates the pay period dates.
-Composes a notification message indicating the start and end dates, and payday.
-Sends the notification email to the list of recipients obtained from data_hub.get7KEmails().
-Sends the notification message via Telegram to the group ID obtained from data_hub.get7KTelegramGroupID().
-Loads the current pay period data from persistent storage, appends the current date, and saves it back.
-Sends a final report message via Telegram indicating successful execution.
-Parameters: None.
-Returns: None.
-
-Error Handling
-The main function is wrapped in a call to data_hub.error_reporting to ensure any errors are reported via Telegram and email.
-
----------------------------------------------------------------------------------
-
--Specifics: VehicleForm_Notify-
-
-VehicleForm_Notify.py is designed to automate the notification process for the submission of vehicle checklists at 7K Mechanical. 
-It sends a notification message via Telegram to employees, prompting them to fill out a form, and saves the execution date for record-keeping.
-
-1. Imports
-The script begins with importing necessary libraries and modules.
-
-
-2. Main Function
-The main function orchestrates the entire vehicle form notification process.
-
-Functionality:
-Composes a notification message with a link to the vehicle checklist form.
-Sends the notification message via Telegram to the group ID obtained from data_hub.get7KTelegramGroupID().
-Loads the current vehicle form notification data from persistent storage, appends the current date, and saves it back.
-Sends a final report message via Telegram indicating successful execution.
-Parameters: None.
-Returns: None.
-
-Error Handling
-The main function is wrapped in a call to data_hub.error_reporting to ensure any errors are reported via Telegram and email.
-
----------------------------------------------------------------------------------
-
--Specifics: BackEndManager-
-
-BackEndManager.py is designed to coordinate the updating of various backend data sets for 7K Mechanical. 
-It triggers the update processes for parts data, jobs/estimates data, and maintenance data, and sends notifications via Telegram to report the status of these updates.
-
-1. Imports
-The script begins with importing necessary libraries and modules.
-
-
-2. Main Function
-The main function orchestrates the entire backend data management process.
-
-Functionality:
-Sends a startup message via Telegram indicating the start time.
-Tries to update parts data by calling PMDback.main() and sends success or failure messages via Telegram.
-Tries to update jobs/estimates data by calling JEDback.main() and sends success or failure messages via Telegram.
-Tries to update maintenance data by calling MMDback.main() and sends success or failure messages via Telegram.
-Sends a completion message via Telegram indicating the end time.
-Parameters: None.
-Returns: None.
-
-Error Handling
-The main function is wrapped in a call to data_hub.error_reporting to ensure any errors are reported via Telegram and email.
-
----------------------------------------------------------------------------------
-
--Specifics: MMDback-
-
-MMDback.py is designed to automate the extraction and storage of customer data from the Housecall Pro website. 
-It logs into the website, navigates through customer records, collects relevant information, and saves the data in a JSON file.
-
-1. Imports
-The script begins with importing necessary libraries and modules.
-
-
-2. Constants
-BACKEND_DATA_FOLDER: Path for the backend data folder.
-CUSTOMER_DATA_FILE: Path for saving the customer data in a JSON file.
-
-
-3. Helper Functions
-
-wait_for_page_load(wd, timeout=30)
-
-Functionality: Waits for the page to fully load.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-timeout (int): Maximum time to wait for the page to load.
-Returns: None.
-
-
-webdriver(specialres=True)
-
-Functionality: Initializes and returns a new Selenium WebDriver instance.
-Parameters:
-specialres (bool): Flag to set special resolution for the WebDriver.
-Returns:
-wd (webdriver.Chrome): Configured Chrome WebDriver instance.
-wait (WebDriverWait): WebDriverWait instance for managing wait times.
-
-
-login(wd, wait)
-
-Functionality: Logs into the Housecall Pro website.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-wait (WebDriverWait): WebDriverWait instance for managing wait times.
-Returns: None.
-
-
-getdata(wd, wait)
-
-Functionality: Extracts customer data from the current page.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-wait (WebDriverWait): WebDriverWait instance for managing wait times.
-Returns:
-dict: Dictionary containing customer data.
-
-
-cyclecustomers(wd, wait)
-
-Functionality: Iterates through customer records, extracting data for each customer.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-wait (WebDriverWait): WebDriverWait instance for managing wait times.
-Returns:
-list: List of dictionaries, each containing customer data.
-
-
-calibrate(wd, wait)
-
-Functionality: Calibrates CSS selectors for locating elements on the page.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-wait (WebDriverWait): WebDriverWait instance for managing wait times.
-Returns:
-tuple: Tuple containing calibrated values for CSS selectors.
-
-
-4. Main Function
-The main function orchestrates the entire customer data extraction process.
-
-Functionality:
-Initializes the WebDriver and logs into Housecall Pro.
-Extracts customer data by iterating through customer records.
-Saves the extracted data to a JSON file.
-Parameters: None.
-Returns: None.
-
-Error Handling
-The main function is wrapped in a call to data_hub.error_reporting to ensure any errors are reported via Telegram and email.
-
----------------------------------------------------------------------------------
-
--Specifics: JEDback-
-
-JEDback.py automates the extraction, processing, and storage of job and estimate data from the Housecall Pro API. 
-It logs into the Housecall Pro website, fetches job and estimate data, filters and formats the data, and saves it in a JSON file.
-
-1. Imports
-The script begins with importing necessary libraries and modules.
-
-
-2. Constants
-BACKEND_DATA_FOLDER: Path for the backend data folder.
-JOBS_ESTIMATES_FILE: Path for saving the jobs and estimates data in a JSON file.
-
-
-3. Helper Functions
-
-webdriver()
-
-Functionality: Initializes and returns a new Selenium WebDriver instance.
-Parameters: None.
-Returns:
-wd (webdriver.Chrome): Configured Chrome WebDriver instance.
-
-
-login(wd)
-
-Functionality: Logs into the Housecall Pro website.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-Returns: None.
-
-
-fetch_all_jobs()
-
-Functionality: Fetches all job records from the Housecall Pro API.
-Parameters: None.
-Returns:
-list: List of all job records.
-
-
-is_not_declined_or_expired(estimate)
-
-Functionality: Checks if an estimate is not declined or expired.
-Parameters:
-estimate (dict): Estimate record.
-Returns:
-bool: True if the estimate is not declined or expired, False otherwise.
-
-
-fetch_unsent_estimates()
-
-Functionality: Fetches unsent estimates from the Housecall Pro API.
-Parameters: None.
-Returns:
-list: List of unsent estimate records.
-
-
-contains_estimate(item)
-
-Functionality: Checks if a job or estimate record contains the word "estimate".
-Parameters:
-item (str/dict/list): Job or estimate record.
-Returns:
-bool: True if the record contains the word "estimate", False otherwise.
-
-
-jobs_with_estimate_in_last_month(jobs)
-
-Functionality: Filters jobs with estimates created in the last month.
-Parameters:
-jobs (list): List of job records.
-Returns:
-list: List of filtered job records.
-
-
-contains_sequence(word, sequence)
-
-Functionality: Checks if a word contains a specific sequence of characters.
-Parameters:
-word (str): The word to check.
-sequence (str): The sequence of characters to look for.
-Returns:
-bool: True if the word contains the sequence, False otherwise.
-
-
-jobs_scheduled_but_not_completed(jobs)
-
-Functionality: Filters jobs that are scheduled but not completed.
-Parameters:
-jobs (list): List of job records.
-Returns:
-list: List of filtered job records.
-
-
-get_display_name(job, wd)
-
-Functionality: Retrieves the display name for a job from the Housecall Pro website.
-Parameters:
-job (dict): Job record.
-wd (webdriver.Chrome): Selenium WebDriver instance.
-Returns:
-str: Display name of the job.
-
-
-format_job(job, wd)
-
-Functionality: Formats a job record for storage.
-Parameters:
-job (dict): Job record.
-wd (webdriver.Chrome): Selenium WebDriver instance.
-Returns:
-dict: Formatted job record.
-
-
-format_estimate(estimate)
-
-Functionality: Formats an estimate record for storage.
-Parameters:
-estimate (dict): Estimate record.
-Returns:
-dict: Formatted estimate record.
-
-
-add_job_to_employee_list(job, jobs_by_employee, wd)
-
-Functionality: Adds a job to the list of jobs assigned to employees.
-Parameters:
-job (dict): Job record.
-jobs_by_employee (dict): Dictionary of jobs grouped by employees.
-wd (webdriver.Chrome): Selenium WebDriver instance.
-Returns: None.
-
-
-add_estimate_to_employee_list(estimate, estimates_by_employee)
-
-Functionality: Adds an estimate to the list of estimates assigned to employees.
-Parameters:
-estimate (dict): Estimate record.
-estimates_by_employee (dict): Dictionary of estimates grouped by employees.
-Returns: None.
-
-
-4. Main Function
-The main function orchestrates the entire data extraction and processing process.
-
-Functionality:
-Initializes the WebDriver and logs into Housecall Pro.
-Fetches unsent estimates and all jobs from the Housecall Pro API.
-Filters and formats job and estimate data.
-Saves the formatted data to a JSON file.
-Parameters: None.
-Returns: None.
-
-Error Handling
-The main function is wrapped in a call to data_hub.error_reporting to ensure any errors are reported via Telegram and email.
-
----------------------------------------------------------------------------------
-
--Specifics: PMDback-
-
-PMDback.py is designed to automate the extraction, processing, and storage of order and price check information from the 7K Mechanical Pricebook website. It uses Selenium WebDriver for web automation, processes orders and price checks, and saves the data into a JSON dataset.
-
-1. Imports
-The script begins with importing necessary libraries and modules.
-
-
-2. Constants
-BACKEND_DATA_FOLDER: Path for the backend data folder.
-GOOD_PAGES_FILE: Path for saving the list of pages with good statuses.
-BAD_PAGES_FILE: Path for saving the list of pages with bad statuses.
-DATASET_FILE: Path for saving the dataset of order information.
-
-
-3. Helper Functions
-
-load_saved_pages()
-
-Functionality: Loads the saved pages with good and bad statuses from JSON files.
-Parameters: None.
-Returns:
-set: Set of good pages.
-set: Set of bad pages.
-
-
-load_dataset()
-
-Functionality: Loads the dataset from a JSON file.
-Parameters: None.
-Returns:
-dict: Dictionary containing the dataset.
-
-
-save_pages(good_pages, bad_pages)
-
-Functionality: Saves the pages with good and bad statuses to JSON files.
-Parameters:
-good_pages (set): Set of good pages.
-bad_pages (set): Set of bad pages.
-Returns: None.
-
-
-save_dataset(dataset)
-
-Functionality: Saves the dataset to a JSON file.
-Parameters:
-dataset (dict): Dictionary containing the dataset.
-Returns: None.
-
-
-webdriver()
-
-Functionality: Initializes and returns a new Selenium WebDriver instance.
-Parameters: None.
-Returns:
-wd (webdriver.Chrome): Configured Chrome WebDriver instance.
-wait (WebDriverWait): WebDriverWait instance with a 2-second timeout.
-
-
-login(wd)
-
-Functionality: Logs into the 7K Mechanical Pricebook website and navigates to the Order Search page.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-Returns: None.
-
-
-process_order(wd, wait, outofrange, good_pages, bad_pages, pgnum)
-
-Functionality: Processes the order/price check information and updates the status of the page.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-wait (WebDriverWait): WebDriverWait instance.
-outofrange (int): Counter for out-of-range pages.
-good_pages (set): Set of good pages.
-bad_pages (set): Set of bad pages.
-pgnum (int): Page number being processed.
-Returns:
-int: Updated out-of-range counter.
-dict: Dictionary containing the order information.
-
-
-builddatabase(wd, wait, good_pages, bad_pages)
-
-Functionality: Builds the dataset by iterating through the pages and processing the orders.
-Parameters:
-wd (webdriver.Chrome): Selenium WebDriver instance.
-wait (WebDriverWait): WebDriverWait instance.
-good_pages (set): Set of good pages.
-bad_pages (set): Set of bad pages.
-Returns:
-dict: Dictionary containing the dataset.
-
-
-pmddata(dataset)
-
-Functionality: Loads the dataset.
-Parameters:
-dataset (dict): Dictionary containing the dataset.
-Returns:
-dict: Dictionary containing the dataset.
-
-
-4. Main Function
-The main function orchestrates the entire data extraction and processing process.
-
-Functionality:
-Initializes the WebDriver and logs into the 7K Mechanical Pricebook website.
-Loads the saved pages with good and bad statuses.
-Builds the dataset by iterating through the pages and processing the orders.
-Saves the dataset and the pages with good and bad statuses.
-Saves the execution date.
-Parameters: None.
-Returns: None.
-
-Error Handling
-The main function is wrapped in a call to data_hub.error_reporting to ensure any errors are reported via Telegram and email.
-
----------------------------------------------------------------------------------
-
--Specifics: SevenKfront-
-
-SevenKfront.py is a Flask application designed to serve as the frontend for the 7K Mechanical management system. 
-It provides various routes to interact with the backend data and functionalities like refreshing data, viewing jobs and estimates, customer data, and saving notes.
-
-1. Imports
-The script starts with importing necessary libraries and modules.
-
-2. Constants
-BACKEND_DATA_FOLDER: Path for the backend data folder.
-DATASET_FILE: Path for saving the dataset.
-CUSTOMER_DATA_FILE: Path for saving the customer data.
-JOBS_ESTIMATES_FILE: Path for saving jobs and estimates data.
-NOTES_FILE: Path for saving notes data.
-URL_FILE: Path for saving the URL data.
-oldurl: Global variable to store the old URL.
-
-
-3. Helper Functions
-
-load_urls()
-
-Functionality: Loads the old URL from the pickle file.
-Parameters: None.
-Returns: None.
-
-
-save_urls()
-
-Functionality: Saves the current URL to the pickle file.
-Parameters: None.
-Returns: None.
-
-
-get_local_ip()
-
-Functionality: Gets the local IP address of the machine.
-Parameters: None.
-Returns:
-str: Local IP address.
-
-
-load_dataset()
-
-Functionality: Loads the dataset from the JSON file.
-Parameters: None.
-Returns:
-dict: Dictionary containing the dataset.
-
-
-load_customer_data()
-
-Functionality: Loads the customer data from the JSON file.
-Parameters: None.
-Returns:
-dict: Dictionary containing the customer data.
-
-
-load_jobs_estimates_data()
-
-Functionality: Loads the jobs and estimates data from the JSON file.
-Parameters: None.
-Returns:
-dict: Dictionary containing the jobs and estimates data.
-
-
-load_notes()
-
-Functionality: Loads the notes data from the JSON file.
-Parameters: None.
-Returns:
-dict: Dictionary containing the notes data.
-
-
-save_notes(notes_data)
-
-Functionality: Saves the notes data to the JSON file.
-Parameters:
-notes_data (dict): Dictionary containing the notes data.
-Returns: None.
-
-
-send_url()
-
-Functionality: Sends the URL to the Telegram group if it has changed.
-Parameters: None.
-Returns: None.
-
-
-run_with_waitress()
-
-Functionality: Runs the Flask app with Waitress.
-Parameters: None.
-Returns: None.
-
-
-4. Flask Routes
-
-/refresh-data
-
-Method: POST
-Functionality: Refreshes the parts data by calling PMDback.main().
-Returns: JSON response with a success or error message.
-
-
-/refresh-jobs-estimates-data
-
-Method: POST
-Functionality: Refreshes the jobs and estimates data by calling JEDback.main().
-Returns: JSON response with a success or error message.
-
-
-/refresh-customer-data
-
-Method: POST
-Functionality: Refreshes the customer data by calling MMDback.main().
-Returns: JSON response with a success or error message.
-
-
-/
-
-Method: GET
-Functionality: Renders the main page first.html.
-Returns: Rendered HTML template.
-
-
-/jobs_estimates
-
-Method: GET
-Functionality: Renders the jobs and estimates page jobs_estimates.html.
-Returns: Rendered HTML template.
-
-
-/parts
-
-Method: GET
-Functionality: Renders the parts page parts.html.
-Returns: Rendered HTML template.
-
-
-/maintenances
-
-Method: GET
-Functionality: Renders the maintenances page maintenances.html.
-Returns: Rendered HTML template.
-
-
-/data
-
-Method: GET
-Functionality: Returns the dataset as JSON.
-Returns: JSON response with the dataset.
-
-
-/customer-data
-
-Method: GET
-Functionality: Returns the customer data as JSON.
-Returns: JSON response with the customer data.
-
-
-/jobs-estimates-data
-
-Method: GET
-Functionality: Returns the jobs and estimates data as JSON.
-Returns: JSON response with the jobs and estimates data.
-
-
-/notes-data
-
-Method: GET
-Functionality: Returns the notes data as JSON.
-Returns: JSON response with the notes data.
-
-
-/save-note
-
-Method: POST
-Functionality: Saves a new note to the notes data.
-Returns: JSON response with a success message.
-
-
-5. Main Function
-The main function orchestrates the entire process of loading URLs, sending the initial URL, and running the Flask app with Waitress.
-
-Functionality:
-Loads the previous URL from the pickle file.
-Sends the initial URL to the Telegram group if it has changed.
-Runs the Flask app with Waitress.
-Parameters: None.
-Returns: None.
-
----------------------------------------------------------------------------------
-
--Specifics: telegram_message-
-
-telegram_message.py is a utility script designed to send messages to a specified Telegram chat or group. 
-It uses the Telegram Bot API to send these messages. 
-The script includes error handling to ensure that any issues encountered during the message-sending process are reported appropriately.
-
-Components:
-
-Function Definition
-
-report_to_telegram(message, recipient)
-
-Functionality: Sends a message to a specified Telegram chat or group.
-Parameters:
-message (str): The message to be sent.
-recipient (str or None): The chat ID of the recipient. If None, a default chat ID is used.
-Process:
-Constructs the API endpoint using the bot token.
-Sends a POST request to the Telegram Bot API with the chat ID and message text.
-
-Error Handling
-
-The script includes error handling to manage potential issues during the message-sending process.
-If an exception occurs, an error message is constructed and an attempt is made to send this error message to the default Telegram chat.
-If sending the error message to Telegram fails, an attempt is made to send the error message via email.
-If both methods fail, the error is printed to the console.
-
-Detailed Breakdown:
-
-The report_to_telegram function sends a message to a specified Telegram chat or group.
-The function uses the requests library to send a POST request to the Telegram Bot API.
-Error handling ensures that any issues are reported either via Telegram or email.
-
----------------------------------------------------------------------------------
-
--Specifics: rackspace_email-
-
-Rackspace Email Utility
-rackspace_email.py is a utility script designed to send emails using Rackspace's SMTP server. 
-It uses the smtplib library to handle the email sending process and includes error handling to ensure that 
-any issues encountered during the email sending process are reported appropriately.
-
-
-Components:
-
-Function Definition
-
-send_email(recipient, subject, body)
-
-Functionality: Sends an email to a specified recipient with a given subject and body.
-
-Parameters:
-recipient (str): The email address of the recipient.
-subject (str): The subject of the email.
-body (str): The body text of the email.
-
-Process:
-Defines SMTP settings for Rackspace.
-Creates a MIME text message.
-Connects to the SMTP server, starts TLS, logs in, and sends the email.
-Prints a confirmation message if successful, or an error message if not.
-
-Error Handling
-
-The script includes error handling to manage potential issues during the email sending process.
-If an exception occurs, an error message is constructed and an attempt is made to send this error message to the default Telegram chat.
-If sending the error message to Telegram fails, an attempt is made to send the error message via email.
-If both methods fail, the error is printed to the console.
-
-Detailed Breakdown:
-
-The send_email function sends an email to a specified recipient with a given subject and body.
-The function uses the smtplib library to connect to the SMTP server and send the email.
-Error handling ensures that any issues are reported either via Telegram or email.
+The 7K Mechanical Management System is an example of my ability to develop comprehensive software solutions that integrate various technologies to solve real-world business problems. My expertise in Python, web development, API integration, and automation has enabled me to create a system that improves operational efficiency, enhances data management, and ensures timely communication.
