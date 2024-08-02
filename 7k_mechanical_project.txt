@@ -1,178 +1,184 @@
-### 7K Mechanical Management System Overview
+A quick note! 
+This system handles sensitive customer data, and for that reason I did
 
-**Project Title:** 7K Mechanical Management System
+_____________________________________________________________________________________________________
 
-**Description:**  
-The 7K Mechanical Management System is a comprehensive automated solution designed to optimize and streamline the operations of 7K Mechanical, an HVAC service company. This project demonstrates expertise in software development, data management, automation, and integration with third-party services.
+Project Title: 7K Mechanical Management System
 
-**Skills Demonstrated:**
-- Python programming
-- Web scraping
-- API integration
-- Data processing
-- Web development
-- Automation
-- Notification systems
+Description:
+The 7K Mechanical Management System is a comprehensive automated solution designed to optimize and streamline the operations of 7K Mechanical, an HVAC service company. 
+This project demonstrates expertise in software development, data management, automation, and integration with third-party services.
 
-**Tools Used:**
-- Python
-- Selenium
-- Flask
-- Housecall Pro API
-- Rackspace API
-- JSON
-- Bootstrap
-- jQuery
-- Telegram Bot API
+_____________________________________________________________________________________________________
 
-**Key Features and Detailed Technical Descriptions:**
+Skills Demonstrated:
 
----
+Python programming
+Web scraping
+API integration
+Data processing
+Web development
+Automation
+Notification systems
+Tools Used:
 
-#### **Data Hub**
+Python
+Selenium
+Flask
+Housecall Pro API
+Rackspace API
+JSON
+Bootstrap
+jQuery
+Telegram Bot API
+Key Features and Detailed Technical Descriptions:
 
-**Description:**  
-The central script responsible for logging into various services and fetching data required by different components of the system.
+_____________________________________________________________________________________________________
 
-**How It Works:**  
-- Utilizes Selenium WebDriver to automate the login process.
-- Interacts with Housecall Pro and other APIs to fetch job and customer data.
-- Manages session persistence to reduce redundant logins.
+Data Hub
 
-**Skills Demonstrated:**  
-API integration, web scraping, session management.
+Description:
+-The central script responsible for logging into various services and fetching data required by different components of the system.
 
----
+How It Works:
+-Utilizes Selenium WebDriver to automate the login process.
+-Interacts with Housecall Pro and other APIs to fetch job and customer data.
+-Manages session persistence to reduce redundant logins.
 
-#### **Job and Estimate Dashboard**
+Skills Demonstrated:
+-API integration, web scraping, session management.
 
-**Description:**  
-Retrieves and processes jobs and estimates data for display on a dynamic dashboard.
+_____________________________________________________________________________________________________
 
-**How It Works:**  
-- Fetches data from the Housecall Pro API and processes it to extract relevant information.
-- Uses Flask to serve the data to the frontend, which is built with Bootstrap and jQuery.
-- Allows users to click on rows to expand and view more details, including notes and timestamps.
+Job and Estimate Dashboard
 
-**Skills Demonstrated:**  
-Data processing, API integration, dynamic frontend development.
+Description:
+-Retrieves and processes jobs and estimates data for display on a dynamic dashboard.
 
----
+How It Works:
+-Fetches data from the Housecall Pro API and processes it to extract relevant information.
+-Uses Flask to serve the data to the frontend, which is built with Bootstrap and jQuery.
+-Allows users to click on rows to expand and view more details, including notes and timestamps.
 
-#### **Maintenance Management**
+Skills Demonstrated:
+-Data processing, API integration, dynamic frontend development.
 
-**Description:**  
-Manages maintenance schedules, extracts customer data, and displays next service dates.
+_____________________________________________________________________________________________________
 
-**How It Works:**  
-- Automates data extraction from Housecall Pro, processing it to highlight upcoming maintenance tasks.
-- Stores data in JSON format and serves it through Flask endpoints.
-- Displays data in a sorted order, with the oldest service dates at the top.
+Maintenance Management
 
-**Skills Demonstrated:**  
-Data extraction, processing, storage, and sorting algorithms.
+Description:
+-Manages maintenance schedules, extracts customer data, and displays next service dates.
 
----
+How It Works:
+-Automates data extraction from Housecall Pro, processing it to highlight upcoming maintenance tasks.
+-Stores data in JSON format and serves it through Flask endpoints.
+-Displays data in a sorted order, with the oldest service dates at the top.
 
-#### **Parts Management Dashboard**
+Skills Demonstrated:
+-Data extraction, processing, storage, and sorting algorithms.
 
-**Description:**  
-Tracks parts inventory and order statuses, providing a clear view of the supply chain.
+_____________________________________________________________________________________________________
 
-**How It Works:**  
-- Scrapes data from vendor websites and internal databases using Selenium.
-- Classifies parts based on their status and integrates this information into a central dashboard.
-- Uses Flask to serve data and Bootstrap for the responsive UI.
+Parts Management Dashboard
 
-**Skills Demonstrated:**  
-Web scraping, data classification, responsive web design.
+Description:
+-Tracks parts inventory and order statuses, providing a clear view of the supply chain.
 
----
+How It Works:
+-Scrapes data from vendor websites and internal databases using Selenium.
+-Classifies parts based on their status and integrates this information into a central dashboard.
+-Uses Flask to serve data and Bootstrap for the responsive UI.
 
-#### **Rackspace Email Integration**
+Skills Demonstrated:
+-Web scraping, data classification, responsive web design.
 
-**Description:**  
-Manages sending and receiving emails via Rackspace.
+_____________________________________________________________________________________________________
 
-**How It Works:**  
-- Uses the Rackspace API to send and receive emails.
-- Automates the process of sending notifications and reports.
-- Integrates email communication into the workflow to ensure timely updates.
+Rackspace Email Integration
 
-**Skills Demonstrated:**  
-API integration, automated email handling.
+Description:
+-Manages sending and receiving emails via Rackspace.
 
----
+How It Works:
+-Uses the Rackspace API to send and receive emails.
+-Automates the process of sending notifications and reports.
+-Integrates email communication into the workflow to ensure timely updates.
 
-#### **Scheduler**
+Skills Demonstrated:
+-API integration, automated email handling.
 
-**Description:**  
-Automates periodic tasks to ensure data is refreshed regularly and processes run smoothly.
+_____________________________________________________________________________________________________
 
-**How It Works:**  
-- Implements custom scheduling scripts to run periodic tasks such as data refresh and report generation.
-- Uses Python's schedule library to define and manage task schedules.
-- Ensures the system remains up-to-date without manual intervention.
+Scheduler
 
-**Skills Demonstrated:**  
-Automation, task scheduling, script optimization.
+Description:
+-Automates periodic tasks to ensure data is refreshed regularly and processes run smoothly.
 
----
+How It Works:
+-Implements custom scheduling scripts to run periodic tasks such as data refresh and report generation.
+-Uses Python's schedule library to define and manage task schedules.
+-Ensures the system remains up-to-date without manual intervention.
 
-#### **Frontend Management**
+Skills Demonstrated:
+-Automation, task scheduling, script optimization.
 
-**Description:**  
-Manages user interactions and provides endpoints for data display.
+_____________________________________________________________________________________________________
 
-**How It Works:**  
-- Uses Flask to create RESTful endpoints that serve data to the frontend.
-- Implements dynamic content loading with jQuery to enhance user experience.
-- Designs a responsive UI with Bootstrap, ensuring compatibility across devices.
+Frontend Management
 
-**Skills Demonstrated:**  
-Web development, RESTful API design, responsive design.
+Description:
+-Manages user interactions and provides endpoints for data display.
 
----
+How It Works:
+-Uses Flask to create RESTful endpoints that serve data to the frontend.
+-Implements dynamic content loading with jQuery to enhance user experience.
+-Designs a responsive UI with Bootstrap, ensuring compatibility across devices.
 
-#### **Telegram Messaging**
+Skills Demonstrated:
+-Web development, RESTful API design, responsive design.
 
-**Description:**  
-Sends notifications about system status and updates.
+_____________________________________________________________________________________________________
 
-**How It Works:**  
-- Integrates with the Telegram Bot API to send real-time notifications.
-- Automates alerts for significant events such as data refresh completion or errors.
-- Ensures stakeholders receive timely updates, improving communication.
+Telegram Messaging
 
-**Skills Demonstrated:**  
-Real-time communication, API integration, alert systems.
+Description:
+-Sends notifications about system status and updates.
 
----
+How It Works:
+-Integrates with the Telegram Bot API to send real-time notifications.
+-Automates alerts for significant events such as data refresh completion or errors.
+-Ensures team members receive timely updates, improving communication.
 
-### Workflow and User Interaction
+Skills Demonstrated:
+-Real-time communication, API integration, alert systems.
 
-**Data Extraction:**
-- Automated login and data extraction using Selenium and API calls.
-- Regularly scheduled tasks to refresh data, ensuring up-to-date information.
+_____________________________________________________________________________________________________
 
-**Data Processing and Storage:**
-- Data cleaning and transformation to ensure accuracy and consistency.
-- Persistent storage using JSON files with mechanisms to handle data updates and retention.
+Workflow and User Interaction
 
-**Dynamic Dashboards:**
-- Interactive dashboards for Jobs & Estimates, Parts Tracking, and Maintenance Management.
-- User-friendly interfaces that allow for detailed views and note-taking.
+Data Extraction:
+-Automated login and data extraction using Selenium and API calls.
+-Regularly scheduled tasks to refresh data, ensuring up-to-date information.
 
-**Automation and Scheduling:**
-- Automated data refresh tasks using custom scripts, ensuring minimal manual intervention.
-- Scheduling of periodic tasks to keep the system running smoothly.
+Data Processing and Storage:
+-Data cleaning and transformation to ensure accuracy and consistency.
+-Persistent storage using JSON files with mechanisms to handle data updates and retention.
 
-**Notification System:**
-- Real-time notifications via Telegram for important updates and alerts.
-- Ensures stakeholders are informed about system status and critical events.
+Dynamic Dashboards:
+-Interactive dashboards for Jobs & Estimates, Parts Tracking, and Maintenance Management.
+-User-friendly interfaces that allow for detailed views and note-taking.
 
----
+Automation and Scheduling:
+-Automated data refresh tasks using custom scripts, ensuring minimal manual intervention.
+-Scheduling of periodic tasks to keep the system running smoothly.
 
-### Summary
+Notification System:
+-Real-time notifications via Telegram for important updates and alerts.
+-Ensures stakeholders are informed about system status and critical events.
 
-The 7K Mechanical Management System is an example of my ability to develop comprehensive software solutions that integrate various technologies to solve real-world business problems. My expertise in Python, web development, API integration, and automation has enabled me to create a system that improves operational efficiency, enhances data management, and ensures timely communication.
+_____________________________________________________________________________________________________
+
+Summary
+The 7K Mechanical Management System is an example of my ability to develop comprehensive software solutions that integrate various technologies to solve real-world business problems. 
+My expertise in Python, web development, API integration, and automation has enabled me to create a system that improves operational efficiency, enhances data management, and ensures timely communication.
