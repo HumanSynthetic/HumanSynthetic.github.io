@@ -1,4 +1,4 @@
-# ZoeDe
+# Jared
 
 Automation builder, systems tinkerer, and workflow toolmaker.
 
