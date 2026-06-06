@@ -1,8 +1,8 @@
-# Jared
+# Jared Hull
 
-Automation builder, systems tinkerer, and workflow toolmaker.
+Automation builder, systems tinkerer, and experimental toolmaker.
 
-I build software that starts in real-world friction, grows through experimentation, and matures into useful systems. A lot of my work lived for years in private archives of scripts, prototypes, schedulers, bots, and operational helpers. I am now rebuilding the strongest parts of that archive into clean public projects and case studies.
+I build software that starts in real-world friction, grows through experimentation, and matures into usable systems. A lot of my work lived for years in private archives of scripts, prototypes, schedulers, bots, operational helpers, creative tools, and research experiments. I am rebuilding the strongest parts of that archive into clean public projects, research notes, and case studies.
 
 ## What I Work On
 
@@ -11,28 +11,39 @@ I build software that starts in real-world friction, grows through experimentati
 - Experimental creative automation
 - AI and systems research prototypes
 
-## Featured Project Families
+## Featured Public Stack
 
-### `latest-7kauto`
+### `field-ops-automation-suite`
 
-An evolving operational automation family with deployed, legacy, and iteration branches. This is one of the clearest examples in my archive of software growing from scripts into a more structured system.
+Rebuilt from the `latest-7kauto` family. This is the clearest flagship in my archive for operational automation, reporting workflows, and system evolution across deployed and legacy branches.
 
-### `hsn`
+### `hsn-agent-network`
 
-A distributed personal agent network experiment with scheduler logic, worker roles, job assignment, and update paths. This is one of my most distinctive systems projects.
+Rebuilt from `hsn`. A worker-network experiment with shared-state coordination, manager failover, job assignment, and update support.
 
-### `7knotify`
+### `scheduled-ops-notifier`
 
-An earlier recurring notification and reporting system that helped shape later operations tooling.
+Rebuilt from `7knotify`. A recurring scheduler and reporting family that captures the earlier monolithic phase of later operations tooling.
 
-### `ookooko`
+### `generative-drawing-bot`
 
-A deep archive of early automation experiments and custom tooling. I treat this as an origin-story package and extract focused public stories from it rather than publishing it raw.
+Extracted from `ookooko`. A creative-coding project built around randomized drawing behavior, evolving color state, and exportable artwork sessions.
+
+This mix is intentional. The public stack leads with practical automation systems, but it also shows the creative and research branches that kept feeding those systems over time.
+
+## Archive And Research Branches
+
+- `web-media-harvester-lab`
+  - browser-automation extract from the `ookooko` lab
+- `early-ops-automation-notes`
+  - docs-first bridge from the earliest office scripts into later package families
+- `aivia-research-notes`
+  - local AI assistant research branch built from `aivia` and `aiviaold`
 
 ## Current Focus
 
 - Reconstructing sanitized public repos from a large private historical archive
-- Turning package families into GitHub repos, portfolio case studies, and website content
+- Turning package families and extracts into GitHub repos, portfolio case studies, and website content
 - Preserving lineage so projects are shown honestly as they evolved over time
 
 ## Notes
