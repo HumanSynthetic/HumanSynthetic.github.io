@@ -1,206 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jared's Portfolio</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            scroll-behavior: smooth;
-        }
-        header, footer {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
-            text-align: center;
-        }
-        nav {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            background: #444;
-        }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            margin: 0;
-            padding: 0;
-        }
-        nav ul li {
-            margin: 0 1rem;
-        }
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5rem;
-            transition: background 0.3s;
-        }
-        nav ul li a:hover {
-            background: #555;
-            border-radius: 5px;
-        }
-        section {
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-        .accordion {
-            background-color: #eee;
-            color: #444;
-            cursor: pointer;
-            padding: 18px;
-            width: 100%;
-            border: none;
-            text-align: left;
-            outline: none;
-            font-size: 15px;
-            transition: 0.4s;
-            border-radius: 5px;
-            margin-top: 10px;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jared | HumanSynthetic</title>
+  <meta name="description" content="Automation systems, workflow tools, and long-running software experiments by Jared (HumanSynthetic).">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3efe7;
+      --surface: rgba(255, 252, 245, 0.86);
+      --ink: #1c1a18;
+      --muted: #61584d;
+      --accent: #a34722;
+      --accent-dark: #7f3417;
+      --line: rgba(28, 26, 24, 0.12);
+      --shadow: 0 18px 50px rgba(54, 39, 22, 0.12);
+      --radius: 24px;
+      --max: 1120px;
+    }
 
-        .active, .accordion:hover {
-            background-color: #ccc;
-        }
+    * {
+      box-sizing: border-box;
+    }
 
-        .panel {
-            padding: 0 18px;
-            background-color: white;
-            display: none;
-            overflow: hidden;
-            border: 1px solid #ccc;
-            border-radius: 0 0 5px 5px;
-            text-align: left;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        #back-to-top-btn {
-            display: none;
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            z-index: 99;
-            border: none;
-            outline: none;
-            background-color: #0066cc;
-            color: white;
-            cursor: pointer;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 18px;
-            transition: background 0.3s;
-        }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(163, 71, 34, 0.16), transparent 34%),
+        radial-gradient(circle at top right, rgba(98, 140, 116, 0.12), transparent 28%),
+        linear-gradient(180deg, #f7f1e8 0%, #efe7db 100%);
+      font-family: "Space Grotesk", sans-serif;
+    }
 
-        #back-to-top-btn:hover {
-            background-color: #0055aa;
-        }
-    </style>
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      width: min(calc(100% - 32px), var(--max));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(243, 239, 231, 0.76);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 0;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .hero {
+      padding: 72px 0 28px;
+    }
+
+    .hero-card {
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.75);
+      box-shadow: var(--shadow);
+      border-radius: 30px;
+      padding: 44px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 260px;
+      height: 260px;
+      right: -60px;
+      top: -90px;
+      background: radial-gradient(circle, rgba(163, 71, 34, 0.2), transparent 65%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 700;
+      font-size: 0.78rem;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.5rem, 6vw, 5.1rem);
+      line-height: 0.94;
+      max-width: 860px;
+    }
+
+    .hero-copy {
+      margin-top: 22px;
+      max-width: 720px;
+      font-size: 1.08rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button.primary {
+      background: var(--accent);
+      color: #fff8f1;
+    }
+
+    .button.primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      color: var(--ink);
+      background: rgba(255, 255, 255, 0.55);
+    }
+
+    .meta-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .meta-card {
+      background: rgba(255, 255, 255, 0.65);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .meta-card strong {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 6px;
+    }
+
+    .meta-card span {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    main section {
+      padding: 28px 0;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(1.7rem, 4vw, 2.7rem);
+    }
+
+    .section-blurb {
+      max-width: 560px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.72);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(54, 39, 22, 0.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+    }
+
+    .card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .pill {
+      display: inline-flex;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(163, 71, 34, 0.1);
+      color: var(--accent-dark);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 18px;
+      background: rgba(255, 255, 255, 0.68);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 20px;
+    }
+
+    .timeline-label {
+      color: var(--accent);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.78rem;
+      padding-top: 4px;
+    }
+
+    .serif {
+      font-family: "Source Serif 4", serif;
+      font-size: 1.12rem;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .list {
+      display: grid;
+      gap: 10px;
+      padding-left: 20px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .footer {
+      padding: 34px 0 52px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 880px) {
+      .meta-strip,
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .timeline-item {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-card {
+        padding: 30px 22px;
+      }
+
+      .topbar-inner,
+      .section-head {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Jared's Portfolio</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+  <div class="topbar">
+    <div class="shell topbar-inner">
+      <div class="brand">HumanSynthetic</div>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#timeline">Timeline</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="shell">
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">Automation Builder and Systems Tinkerer</div>
+        <h1>Software that starts in friction and grows into systems.</h1>
+        <p class="hero-copy">
+          I'm Jared, also known as HumanSynthetic. I build automation systems, workflow tools,
+          and experimental software that evolve through real use. A lot of my best work started
+          in private archives of scripts, schedulers, bots, and operational helpers. I'm now
+          rebuilding the strongest parts of that history into clearer public projects and case studies.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://github.com/HumanSynthetic" target="_blank" rel="noreferrer">Visit GitHub</a>
+          <a class="button secondary" href="#projects">View Project Lines</a>
+        </div>
+        <div class="meta-strip">
+          <div class="meta-card">
+            <strong>Ops Automation</strong>
+            <span>Reporting, workflow support, recurring task systems, and practical business tooling.</span>
+          </div>
+          <div class="meta-card">
+            <strong>Agent Systems</strong>
+            <span>Scheduler and worker experiments, orchestration ideas, and distributed tooling.</span>
+          </div>
+          <div class="meta-card">
+            <strong>Creative Labs</strong>
+            <span>Browser tools, media experiments, and early custom automation work.</span>
+          </div>
+          <div class="meta-card">
+            <strong>AI R&amp;D</strong>
+            <span>Prototype assistant and model-heavy experiments with a research-first feel.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <section id="about">
+        <div class="section-head">
+          <h2>About</h2>
+          <p class="section-blurb serif">
+            I do not treat old code as disposable. Many of my later systems grew out of earlier
+            experiments, so this portfolio is organized around lineages and project families rather
+            than one-off files.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-head">
+          <h2>Project Lines</h2>
+          <p class="section-blurb">
+            The archive behind this site is bigger than the public surface. These are the strongest
+            project lines and live public anchors right now.
+          </p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>7K Mechanical Management System</h3>
+            <p>
+              A comprehensive automation and workflow system built around real HVAC operations.
+              This line includes dashboards, reporting flows, data handling, scheduling, and
+              integrations with external services.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Python</span>
+              <span class="pill">Flask</span>
+              <span class="pill">Automation</span>
+              <span class="pill">API Integration</span>
+            </div>
+            <p style="margin-top:14px;">
+              <a href="7k_mechanical_project.txt">Read the project overview</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Iterative Improvement Simulation</h3>
+            <p>
+              A conflict simulation exploring whether two AI systems competing over objectives
+              could produce a clear winning strategy through iteration.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Python</span>
+              <span class="pill">Simulation</span>
+              <span class="pill">AI Experiment</span>
+            </div>
+            <p style="margin-top:14px;">
+              <a href="https://github.com/HumanSynthetic/IterativeImprovmentSimulation" target="_blank" rel="noreferrer">View on GitHub</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>ForeverQuest</h3>
+            <p>
+              An AI-powered, multiplayer, D&amp;D-style Telegram game that blends conversational systems,
+              game design, and multiplayer interaction.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Python</span>
+              <span class="pill">Game Systems</span>
+              <span class="pill">Telegram</span>
+            </div>
+            <p style="margin-top:14px;">
+              <a href="https://github.com/HumanSynthetic/ForeverQuest" target="_blank" rel="noreferrer">View on GitHub</a>
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Archive Rebuilds In Progress</h3>
+            <p>
+              I am actively rebuilding more of the private archive into public-ready repos, especially
+              around operations automation, agent systems, and curated automation-lab extracts.
+            </p>
+            <div class="pill-row">
+              <span class="pill">Field Ops Automation</span>
+              <span class="pill">Agent Network</span>
+              <span class="pill">Archive Extracts</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="timeline">
+        <div class="section-head">
+          <h2>How The Work Evolved</h2>
+          <p class="section-blurb">
+            The strongest thread in this archive is progression: experiments become tools, tools
+            become systems, and systems become cleaner public artifacts.
+          </p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-label">Early Experiments</div>
+            <div>
+              <strong>Automation Lab Work</strong>
+              <p class="serif">
+                Browser automation, media experiments, custom helpers, and the rough prototypes
+                that seeded later systems work.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-label">Operational Utility</div>
+            <div>
+              <strong>Workflow and Notifier Systems</strong>
+              <p class="serif">
+                Repeated business and operational tasks became notification, reporting, and support
+                tools with real recurring value.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-label">Systems Thinking</div>
+            <div>
+              <strong>Agent and Scheduler Experiments</strong>
+              <p class="serif">
+                Work expanded from single scripts into multi-part systems with workers, coordination,
+                update paths, and orchestration ideas.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-label">Public Rebuild</div>
+            <div>
+              <strong>Curated, Sanitized Releases</strong>
+              <p class="serif">
+                The current phase focuses on reconstructing the strongest private project lines
+                into cleaner public repos and portfolio case studies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="section-head">
+          <h2>Contact</h2>
+          <p class="section-blurb">
+            The easiest place to follow ongoing public work is GitHub. More archive rebuilds and
+            project writeups will continue to land there over time.
+          </p>
+        </div>
+        <ul class="list">
+          <li><a href="https://github.com/HumanSynthetic" target="_blank" rel="noreferrer">GitHub: HumanSynthetic</a></li>
+          <li><a href="mailto:jared.hull.dev@gmail.com">jared.hull.dev@gmail.com</a></li>
         </ul>
-    </nav>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Howdy! I'm Jared, a self-taught developer with experience in creating software for an HVAC company and various other coding projects. Welcome to my portfolio!</p>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <button class="accordion">7K Mechanical Management System</button>
-        <div class="panel">
-            <div id="project-description-7k">
-                <p>A quick note!</p>
-                <p>This system handles sensitive customer data, and for that reason I did not include any back-end code.</p>
-                <p>This document is an overview. Here is a link to a <a href="https://docs.google.com/document/d/1Cp546c91sKYvnBZtovJsI_3U66NyxID1CF11U9RRtHg/edit?usp=sharing" target="_blank">Google Doc</a>, for if you would like to see a more detailed write-up.</p>
-                <hr>
-                <!-- Additional content can be dynamically loaded here -->
-            </div>
-        </div>
+      </section>
+    </main>
 
-        <button class="accordion">Iterative Improvement Simulation</button>
-        <div class="panel">
-            <div id="project-description-iterative">
-                <p>A conflict simulation designed to observe the iterative improvements an AI might make to achieve an objective. Check out the project on <a href="https://github.com/HumanSynthetic/IterativeImprovmentSimulation" target="_blank">GitHub</a>.</p>
-            </div>
-        </div>
-
-        <button class="accordion">ForeverQuest</button>
-        <div class="panel">
-            <div id="project-description-foreverquest">
-                <p>An AI-powered, D&D-style, multiplayer Telegram game. Check out the project on <a href="https://github.com/HumanSynthetic/ForeverQuest" target="_blank">GitHub</a>.</p>
-            </div>
-        </div>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>You can reach me at <a href="mailto:jared.hull.dev@gmail.com">jared.hull.dev@gmail.com</a> or find me on <a href="https://github.com/HumanSynthetic">GitHub</a>.</p>
-    </section>
-    <footer>
-        <p>&copy; 2024 Jared's Portfolio</p>
+    <footer class="footer">
+      <p>HumanSynthetic portfolio site. Built around automation systems, workflow tooling, and long-running software experiments.</p>
     </footer>
-    <button id="back-to-top-btn" title="Back to top">Back To Top</button>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('7k_mechanical_project.txt')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('project-description-7k').innerHTML += '<div class="project-details">' + data.replace(/\n/g, '<br>') + '</div>';
-                });
-
-            var acc = document.getElementsByClassName("accordion");
-            for (var i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                    this.classList.toggle("active");
-                    var panel = this.nextElementSibling;
-                    if (panel.style.display === "block") {
-                        panel.style.display = "none";
-                    } else {
-                        panel.style.display = "block";
-                    }
-                });
-            }
-        });
-
-        var mybutton = document.getElementById("back-to-top-btn");
-
-        window.onscroll = function() {
-            scrollFunction();
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                mybutton.style.display = "block";
-            } else {
-                mybutton.style.display = "none";
-            }
-        }
-
-        mybutton.onclick = function() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTop = 0;
-        };
-    </script>
+  </div>
 </body>
 </html>
