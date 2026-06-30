@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBooks Disconnect | Jared Hull</title>
+  <meta name="description" content="Disconnect information page for Jared Hull's QuickBooks integration.">
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7f4ef; color: #1b1d21; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 56px; }
+    .card { background: #fffdf9; border: 1px solid #d8d3c9; border-radius: 18px; padding: 28px; }
+    h1 { margin-top: 0; }
+    p, li { line-height: 1.65; color: #4f5661; }
+    a { color: #17643a; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Company Disconnected</h1>
+      <p>
+        This page confirms that a QuickBooks company connection has been disconnected or is in the process
+        of being disconnected.
+      </p>
+      <p>
+        After disconnect:
+      </p>
+      <ul>
+        <li>the integration should no longer request new QuickBooks data for that company</li>
+        <li>stored connection tokens should be revoked or removed where applicable</li>
+        <li>reconnection requires a fresh authorization flow</li>
+      </ul>
+      <p>
+        If the disconnection was unintentional, return to the connect page and start the authorization flow again.
+      </p>
+      <p>
+        <a href="./qb-codex-connect.html">Go to Connect / Reconnect</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>

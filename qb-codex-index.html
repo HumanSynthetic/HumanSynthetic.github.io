@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBooks Integration | Jared Hull</title>
+  <meta name="description" content="Public landing page for Jared Hull's QuickBooks integration and related legal links.">
+  <style>
+    :root {
+      --bg: #f6f3ee;
+      --panel: #fffdf9;
+      --ink: #1b1d21;
+      --muted: #5d6572;
+      --line: #d8d3c9;
+      --accent: #17643a;
+      --accent-2: #0d4b2a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #f9f6f0 0%, #f1ece4 100%);
+      color: var(--ink);
+    }
+    .wrap {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 28px;
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.06);
+    }
+    h1, h2 { margin-top: 0; }
+    p, li { line-height: 1.6; color: var(--muted); }
+    a { color: var(--accent); }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+    .tile {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 18px;
+    }
+    .tile strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+    }
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 700;
+    }
+    .button:hover { background: var(--accent-2); }
+    .small {
+      font-size: 0.95rem;
+    }
+    @media (max-width: 700px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>QuickBooks Integration</h1>
+      <p>
+        This page is the public landing surface for a QuickBooks integration operated by Jared Hull.
+        It exists to provide the public legal and support endpoints required by Intuit app configuration.
+      </p>
+      <p>
+        The production-facing app pages are intentionally simple. The operational application and OAuth
+        flow may live elsewhere.
+      </p>
+
+      <div class="grid">
+        <a class="tile" href="./qb-codex-privacy.html">
+          <strong>Privacy Policy</strong>
+          <span class="small">How data is handled, stored, and limited.</span>
+        </a>
+        <a class="tile" href="./qb-codex-terms.html">
+          <strong>Terms of Use</strong>
+          <span class="small">Conditions, limitations, and service expectations.</span>
+        </a>
+        <a class="tile" href="./qb-codex-disconnect.html">
+          <strong>Disconnect Information</strong>
+          <span class="small">What happens when a QuickBooks company disconnects.</span>
+        </a>
+        <a class="tile" href="./qb-codex-connect.html">
+          <strong>Connect / Reconnect</strong>
+          <span class="small">Information page for starting or restoring a connection.</span>
+        </a>
+      </div>
+
+      <h2 style="margin-top:28px;">Intended App Settings Mapping</h2>
+      <ul>
+        <li><strong>Launch URL:</strong> this page</li>
+        <li><strong>Privacy Policy URL:</strong> <code>qb-codex-privacy.html</code></li>
+        <li><strong>EULA / Terms URL:</strong> <code>qb-codex-terms.html</code></li>
+        <li><strong>Disconnect URL:</strong> <code>qb-codex-disconnect.html</code></li>
+        <li><strong>Connect / Reconnect URL:</strong> <code>qb-codex-connect.html</code></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

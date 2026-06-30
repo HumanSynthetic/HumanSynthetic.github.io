@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect QuickBooks | Jared Hull</title>
+  <meta name="description" content="Connect or reconnect page for Jared Hull's QuickBooks integration.">
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f7f4ef; color: #1b1d21; }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 56px; }
+    .card { background: #fffdf9; border: 1px solid #d8d3c9; border-radius: 18px; padding: 28px; }
+    h1 { margin-top: 0; }
+    p, li { line-height: 1.65; color: #4f5661; }
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      background: #17643a;
+      color: #fff;
+      font-weight: 700;
+    }
+    .button:hover { background: #0d4b2a; }
+    code {
+      background: #f1ece4;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Connect or Reconnect QuickBooks</h1>
+      <p>
+        This page exists as the public connect or reconnect surface for Intuit app configuration.
+      </p>
+      <p>
+        In production, the primary action on this page should send the user to the real OAuth-start route
+        for the integration. That OAuth-start route should be replaced with the actual public HTTPS endpoint
+        once it exists.
+      </p>
+
+      <p>
+        Current placeholder route:
+      </p>
+      <p><code>REPLACE_WITH_PUBLIC_OAUTH_START_URL</code></p>
+
+      <a class="button" href="#" onclick="return false;">Connect QuickBooks</a>
+
+      <p style="margin-top:22px;">
+        If this page is being used before the production OAuth route is live, leave it as a public informational
+        page and update the button target later.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
