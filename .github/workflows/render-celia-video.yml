@@ -65,3 +65,5 @@ jobs:
           name: celia-fund-10s-ad-silent
           path: video-render/output/celia-fund-10s-ad-silent.mp4
           if-no-files-found: error
+
+# Render trigger: 2026-07-16
