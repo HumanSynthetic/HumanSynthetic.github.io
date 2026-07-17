@@ -1,0 +1,67 @@
+name: Render Celia Fund 10s Video
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/render-celia-video.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Download the four Canva frames
+        run: |
+          mkdir -p video-render/source video-render/output
+          curl -L --fail --retry 3 'https://design.canva.ai/jVuCPsPdsiCD_ut' -o video-render/source/slide1.png
+          curl -L --fail --retry 3 'https://design.canva.ai/ZKv2Aw2JmznG35s' -o video-render/source/slide2.png
+          curl -L --fail --retry 3 'https://design.canva.ai/YuwpDQWMomzHK0a' -o video-render/source/slide3.png
+          curl -L --fail --retry 3 'https://design.canva.ai/9IQ1vu8gCoCugzb' -o video-render/source/slide4.png
+          file video-render/source/slide*.png
+
+      - name: Render silent 10-second vertical MP4
+        run: |
+          ffmpeg -y \
+            -loop 1 -t 2.70 -i video-render/source/slide1.png \
+            -loop 1 -t 2.70 -i video-render/source/slide2.png \
+            -loop 1 -t 2.70 -i video-render/source/slide3.png \
+            -loop 1 -t 2.70 -i video-render/source/slide4.png \
+            -filter_complex "\
+              [0:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,zoompan=z='min(zoom+0.00025,1.025)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=81:s=1080x1920:fps=30,format=yuv420p,setpts=PTS-STARTPTS[v0];\
+              [1:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,zoompan=z='min(zoom+0.00022,1.022)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=81:s=1080x1920:fps=30,format=yuv420p,setpts=PTS-STARTPTS[v1];\
+              [2:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,zoompan=z='min(zoom+0.00025,1.025)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=81:s=1080x1920:fps=30,format=yuv420p,setpts=PTS-STARTPTS[v2];\
+              [3:v]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,zoompan=z='min(zoom+0.00020,1.020)':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d=81:s=1080x1920:fps=30,format=yuv420p,setpts=PTS-STARTPTS[v3];\
+              [v0][v1]xfade=transition=fade:duration=0.25:offset=2.45[x1];\
+              [x1][v2]xfade=transition=fade:duration=0.25:offset=4.90[x2];\
+              [x2][v3]xfade=transition=fade:duration=0.25:offset=7.35[vout]" \
+            -map '[vout]' -t 10.00 -an -r 30 \
+            -c:v libx264 -preset medium -crf 18 -movflags +faststart \
+            video-render/output/celia-fund-10s-ad-silent.mp4
+          ffprobe -v error -show_entries format=duration,size -of default=noprint_wrappers=1 video-render/output/celia-fund-10s-ad-silent.mp4
+
+      - name: Commit rendered MP4
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add video-render/output/celia-fund-10s-ad-silent.mp4
+          git commit -m 'Render Celia Fund 10-second silent ad' || exit 0
+          git push
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: celia-fund-10s-ad-silent
+          path: video-render/output/celia-fund-10s-ad-silent.mp4
+          if-no-files-found: error
